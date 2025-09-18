@@ -1,0 +1,145 @@
+/* Menggunakan font romantis dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap');
+
+/* ======================================= */
+/* STYLING UTAMA (UNTUK DESKTOP/LAPTOP)    */
+/* ======================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    overflow: hidden; /* Mencegah scroll saat tombol kabur */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+.icon {
+    width: 150px;           /* Ukuran gambar/icon */
+    height: 150px;          /* Samain tingginya biar jadi kotak sempurna */
+    border-radius: 50%;     /* Bikin jadi bulet sempurna */
+    object-fit: cover;      /* Biar gambar pas di lingkaran & nggak gepeng */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Efek bayangan biar lebih hidup */
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8em;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#tombolMau {
+    background-color: #4CAF50; /* Hijau */
+    color: white;
+}
+
+#tombolMau:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+#tombolNggak {
+    background-color: #f44336; /* Merah */
+    color: white;
+    position: absolute; /* Kunci agar bisa kabur */
+}
+
+/* Bagian Konten "Jadian" */
+.tanda-tangan {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px dashed #e91e63;
+    border-radius: 10px;
+    background-color: #fff0f5;
+}
+
+.tanda-tangan p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.tanda-tangan .tanggal {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #e91e63;
+    font-family: 'Dancing Script', cursive;
+}
+
+.tanda-tangan .nama {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+
+/* ======================================= */
+/* ATURAN UNTUK RESPONSIVE (UNTUK HP)      */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    .content {
+        padding: 30px 25px;
+        margin: 20px;
+    }
+
+    .icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2.3em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
